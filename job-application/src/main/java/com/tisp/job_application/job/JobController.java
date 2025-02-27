@@ -7,15 +7,18 @@ import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/*------------------------Presentation Layer------------------------*/
+
 @RestController
 @RequestMapping("/jobs")
 public class  JobController {
 
-    private JobService jobService;
+    JobService jobService;
 
     public JobController(JobService jobService) {
         this.jobService = jobService;
     }
+
     // GET /jobs: Get all jobs
     //@GetMapping("/jobs")
     @GetMapping

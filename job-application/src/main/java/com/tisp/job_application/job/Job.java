@@ -1,5 +1,6 @@
 package com.tisp.job_application.job;
 
+import com.tisp.job_application.Company.Company;
 import jakarta.persistence.*;
 
 @Entity
@@ -16,6 +17,10 @@ public class Job {
     private String maxSalary;
     private String location;
 
+    @ManyToOne
+    private Company company;
+
+
     public Job() {
     }
 
@@ -30,6 +35,14 @@ public class Job {
     }
 
     //Getters and Setters
+
+    public Company getCompany() {
+        return company;
+    }
+
+    public void setCompany(Company company) {
+        this.company = company;
+    }
     public Long getId() {
         return id;
     }

@@ -2,6 +2,8 @@ package com.tisp.job_application.job;
 
 import java.util.List;
 
+/*------------------------Service Layer------------------------*/
+
 public interface JobService {
 
     List<Job> findAll();
